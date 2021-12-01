@@ -18,6 +18,7 @@ apt install nano
 
 Docker on Debian Stretch: https://tecadmin.net/install-docker-on-debian-9-stretch/ 
 
+```
 sudo apt-get purge docker lxc-docker docker-engine docker.io    
 sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common    
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -    
@@ -25,7 +26,7 @@ sudo add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/debi
 sudo apt-get update    
 sudo apt-get install docker-ce    
 sudo systemctl status docker    
-
+```
 
 OWRX Docker setup: https://github.com/jketterl/openwebrx/wiki/Getting-Started-using-Docker     
 OWRX Docker:  https://hub.docker.com/u/jketterl    
@@ -33,14 +34,15 @@ OWRX Docker:  https://hub.docker.com/u/jketterl
 
 ## OpenWebRX
 
-Install as root:     
+Install as root:  
 
+```
 docker volume create openwebrx-settings     
 
 docker run --tmpfs=/tmp/openwebrx --restart=unless-stopped --device /dev/bus/usb -p 8073:8073 -v openwebrx-settings:/var/lib/openwebrx jketterl/openwebrx:stable &    
 docker run --tmpfs=/tmp/openwebrx --restart=unless-stopped --device /dev/bus/usb -p 8073:8073 -v openwebrx-settings:/var/lib/openwebrx jketterl/openwebrx-full:stable &    
 docker run --tmpfs=/tmp/openwebrx --restart=unless-stopped --device /dev/bus/usb -p 8073:8073 -v openwebrx-settings:/var/lib/openwebrx jketterl/openwebrx-full:latest &    
-
+```
 docker ps   
 ```
 CONTAINER ID   IMAGE                       COMMAND   CREATED         STATUS         PORTS                                       NAMES     
