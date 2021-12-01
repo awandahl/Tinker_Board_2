@@ -51,6 +51,10 @@ CONTAINER ID   IMAGE                       COMMAND   CREATED         STATUS     
 
 Create admin user for a container - see above:  docker exec -it 3b4417aeeda8 python3 /opt/openwebrx/openwebrx.py admin adduser admin  
 
+Create /etc/modprobe.d/blacklist.conf and add this line:     
+blacklist dvb_usb_rtl28xxu sdr_msi3101 msi001 msi2500 hackrf
+run  update-initramfs -u
+
 If you want to kill the above process:     
 docker stop 7f8fa2e61190     
 
