@@ -49,17 +49,29 @@ CONTAINER ID   IMAGE                       COMMAND   CREATED         STATUS     
 7f8fa2e61190   jketterl/openwebrx:stable   "/init"   3 minutes ago   Up 3 minutes   0.0.0.0:8073->8073/tcp, :::8073->8073/tcp   festive_noyce   
 ```
 
-Create admin user for a container - see above:  docker exec -it 3b4417aeeda8 python3 /opt/openwebrx/openwebrx.py admin adduser admin  
+Create admin user for a container - see above:  
+```
+docker exec -it 3b4417aeeda8 python3 /opt/openwebrx/openwebrx.py admin adduser admin  
+```
+Blacklist kernel modules: create /etc/modprobe.d/blacklist.conf and add this line:
 
-Create /etc/modprobe.d/blacklist.conf and add this line:     
+```
+nano /etc/modprobe.d/blacklist.conf
 blacklist dvb_usb_rtl28xxu sdr_msi3101 msi001 msi2500 hackrf
-run  update-initramfs -u
-
-If you want to kill the above process:     
+update-initramfs -u
+```
+Start docker at boot:
+```
+sudo systemctl enable docker
+```
+If you want to kill the above process: 
+```
 docker stop 7f8fa2e61190     
-
-If you want to open a shell to the containter:     
+```
+If you want to open a shell to the containter: 
+```
 docker exec -it 7f8fa2e61190 /bin/bash     
+```
 
 https://groups.io/g/openwebrx/topic/83519516#3531
 
