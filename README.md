@@ -91,30 +91,33 @@ docker run -it jketterl/openwebrx-full admin adduser sm0hpl
 
 ## VNC and other OrangePi stuff...
 
-In the ‘Terminal’ window make the updates:
-– apt-get update
-– apt-get upgrade
+In the ‘Terminal’ window make the updates:    
+apt-get update    
+apt-get upgrade    
 
-Install TightVNC server to have remote graphical access via the VNC client extension of the Chrome browser or TightVNC for Windows.
-apt-get install tightvncserver
+Install TightVNC server to have remote graphical access via the VNC client extension of the Chrome browser or TightVNC for Windows.    
 
-Install xfonts-base to avoid the “could not open default font” fixed “” error when launching vncserver.
+apt-get install tightvncserver    
 
-apt-get install xfonts-base
+Install xfonts-base to avoid the “could not open default font” fixed “” error when launching vncserver.    
 
-Switch to a user account and not root:
+apt-get install xfonts-base    
 
-su username
+Switch to a user account and not root:    
 
-Start VNC in manual mode:
-vncserver :1
+su username    
 
-You will be asked for a password. Do not put more than 8 characters. You can now test VNC with for example the chrome VNC extension by connecting to ‘orangepi_ip_address: 5901’.
+Start VNC in manual mode:    
 
-For an automated launch we will create a script file:
+vncserver :1    
+
+You will be asked for a password. Do not put more than 8 characters. You can now test VNC with for example the chrome VNC extension by connecting to ‘orangepi_ip_address: 5901’.    
+
+For an automated launch we will create a script file:    
+
 sudo nano /usr/local/bin/mon_vnc.sh
 
-''''
+'''
 #!/bin/bash
 PATH="$PATH:/usr/bin/"
 DISPLAY="1"
@@ -134,19 +137,23 @@ $0 start
 ;;
 esac
 exit 0
-''''
+'''
 
-Copy the text above and copy it into nano with a right click if you are using Bitwise SSH. Remember to make this file executable.
- sudo chmod +x /usr/local/bin/mon_vnc.sh
+Copy the text above and copy it into nano with a right click if you are using Bitwise SSH. Remember to make this file executable.    
 
-We can now perform the following 3 operations:
-/usr/local/bin/mon_vnc.sh start
-/usr/local/bin/mon_vnc.sh stop
-/usr/local/bin/mon_vnc.sh restart
+sudo chmod +x /usr/local/bin/mon_vnc.sh    
 
-For an automatic launch of VNC when booting the orange pi we create a service in ‘systemd’.
-sudo nano /lib/systemd/system/mon_vnc.service
+We can now perform the following 3 operations:    
 
+/usr/local/bin/mon_vnc.sh start    
+/usr/local/bin/mon_vnc.sh stop    
+/usr/local/bin/mon_vnc.sh restart    
+
+For an automatic launch of VNC when booting the orange pi we create a service in ‘systemd’.    
+
+sudo nano /lib/systemd/system/mon_vnc.service    
+
+'''
 [Unit]
  Description=Manage Mon Serveur VNC 
  [Service]
@@ -157,13 +164,16 @@ sudo nano /lib/systemd/system/mon_vnc.service
  User=username
  [Install]
  WantedBy=multi-user.target
+'''
 
-Replace username with the user. For the inclusion of this new service in systemd.
-systemctl daemon-reload
-systemctl enable mon_vnc.service
+Replace username with the user. For the inclusion of this new service in systemd.    
+systemctl daemon-reload    
+systemctl enable mon_vnc.service    
 
-Now you can reboot your system and verify with VNC the connection in graphical mode.
-systemctl start mon_vnc.service
-systemctl stop mon_vnc.service
-systemctl restart mon_vnc.service
-systemctl status mon_vnc.service
+Now you can reboot your system and verify with VNC the connection in graphical mode.    
+
+systemctl start mon_vnc.service    
+systemctl stop mon_vnc.service    
+systemctl restart mon_vnc.service    
+systemctl status mon_vnc.service    
+
