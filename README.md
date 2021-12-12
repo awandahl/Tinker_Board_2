@@ -117,7 +117,7 @@ For an automated launch we will create a script file:
 
 sudo nano /usr/local/bin/mon_vnc.sh
 
-'''
+```
 #!/bin/bash
 PATH="$PATH:/usr/bin/"
 DISPLAY="1"
@@ -137,7 +137,7 @@ $0 start
 ;;
 esac
 exit 0
-'''
+```
 
 Copy the text above and copy it into nano with a right click if you are using Bitwise SSH. Remember to make this file executable.    
 
@@ -153,7 +153,7 @@ For an automatic launch of VNC when booting the orange pi we create a service in
 
 sudo nano /lib/systemd/system/mon_vnc.service    
 
-'''
+```
 [Unit]
  Description=Manage Mon Serveur VNC 
  [Service]
@@ -164,7 +164,7 @@ sudo nano /lib/systemd/system/mon_vnc.service
  User=username
  [Install]
  WantedBy=multi-user.target
-'''
+```
 
 Replace username with the user. For the inclusion of this new service in systemd.    
 systemctl daemon-reload    
