@@ -64,13 +64,15 @@ Start docker at boot:
 ```
 sudo systemctl enable docker
 ```
-If you want to kill the above process: 
+If you want to kill/restart/read logs from the above process: 
 ```
-docker stop 7f8fa2e61190     
+docker stop f680e11cbf97  
+docker restart f680e11cbf97     
+docker container logs --tail 200 f680e11cbf97    
 ```
 If you want to open a shell to the containter: 
 ```
-docker exec -it 7f8fa2e61190 /bin/bash     
+docker exec -it f680e11cbf97 /bin/bash     
 ```
 
 https://groups.io/g/openwebrx/topic/83519516#3531
