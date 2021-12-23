@@ -16,6 +16,8 @@ $service keyboard-setup restart
 
 apt install nano    
 
+apt install nmap
+
 apt install ufw
 
 
