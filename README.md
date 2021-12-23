@@ -14,7 +14,19 @@ sudo usermod -a -G sudo aw
 $dpkg-reconfigure keyboard-configuration
 $service keyboard-setup restart 
 
-apt install nano     
+apt install nano    
+
+## Take down wlp1s0    
+nano /etc/network/interfaces    
+````
+# interfaces(5) file used by ifup(8) and ifdown(8)    
+# Include files from /etc/network/interfaces.d:    
+source-directory /etc/network/interfaces.d    
+iface wlp1s0 inet manual    
+````
+sudo service network-manager restart   
+
+## Docker    
 
 Docker on Debian Stretch: https://tecadmin.net/install-docker-on-debian-9-stretch/ 
 
