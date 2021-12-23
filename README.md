@@ -16,6 +16,8 @@ $service keyboard-setup restart
 
 apt install nano    
 
+apt install ufw
+
 
 ## Take down wlp1s0    
 nano /etc/network/interfaces    
@@ -106,6 +108,8 @@ docker stop 56be44f89d15
 docker run -it jketterl/openwebrx-full admin adduser sm0hpl
 
 ## SoapyRemote
+
+
 
 
 ![image](https://user-images.githubusercontent.com/62021989/146646530-b11c5dbd-766a-4210-952e-726c92127e02.png)
