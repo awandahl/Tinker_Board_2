@@ -1,6 +1,6 @@
 # Tinker_Board_2
 
-## Tinker Board 2
+## Tinker Board 2  needed initial changes
 
 sudo su
 nano /etc/hostname    
@@ -15,6 +15,7 @@ $dpkg-reconfigure keyboard-configuration
 $service keyboard-setup restart 
 
 apt install nano    
+
 
 ## Take down wlp1s0    
 nano /etc/network/interfaces    
