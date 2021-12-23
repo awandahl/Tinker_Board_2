@@ -11,7 +11,7 @@ reboot now
 sudo adduser aw    
 sudo usermod -a -G sudo aw     
 
-$dpkg-reconfigure keyboard-configuration
+$dpkg-reconfigure keyboard-configuration     
 $service keyboard-setup restart 
 
 apt install nano    
