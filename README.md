@@ -66,9 +66,9 @@ sudo systemctl enable docker
 ```
 If you want to kill/restart/read logs from the above process: 
 ```
-docker stop f680e11cbf97  
-docker restart f680e11cbf97     
-docker container logs --tail 200 f680e11cbf97    
+docker stop f5d3b67ca250  
+docker restart f5d3b67ca250     
+docker container logs --tail 200 f5d3b67ca250    
 ```
 If you want to open a shell to the containter: 
 ```
