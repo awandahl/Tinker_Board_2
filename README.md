@@ -43,6 +43,8 @@ sudo systemctl status docker
 OWRX Docker setup: https://github.com/jketterl/openwebrx/wiki/Getting-Started-using-Docker     
 OWRX Docker:  https://hub.docker.com/u/jketterl    
 
+Update docker image:  https://github-wiki-see.page/m/jketterl/openwebrx/wiki/How-to-update-openwebrx     
+
 
 ## OpenWebRX
 
