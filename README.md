@@ -18,7 +18,12 @@ apt install nano
 
 apt install nmap
 
-apt install ufw
+apt install ufw    
+sudo nano /etc/default/ufw   (then make sure "IPV6" is set to "no")
+https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server
+
+
+sudo systemctl enable ufw
 
 
 ## Take down wlp1s0    
