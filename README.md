@@ -18,12 +18,29 @@ apt install nano
 
 apt install nmap
 
+## ufw firewall
+
 apt install ufw    
-sudo nano /etc/default/ufw   (then make sure "IPV6" is set to "no")    
+sudo nano /etc/default/ufw   (then make sure "IPV6" is set to "no". ip6 seems not to be in the kernel)    
 https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server
 
-sudo systemctl disable firewalld    
+sudo ufw allow ssh    
+sudo ufw allow 8073/tcp    
+sudo ufw allow https    
+
 sudo systemctl enable ufw
+
+This command for starting ufw at boot doesn't work: sudo systemctl enable ufw     
+so edit like below:       
+
+nano /etc/rc.local (edit last in the file) 
+````
+# start ufw    
+ufw enable    
+exit 0    
+````
+
+
 
 
 ## Take down wlp1s0    
