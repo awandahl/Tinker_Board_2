@@ -24,6 +24,8 @@ apt install ufw
 sudo nano /etc/default/ufw   (then make sure "IPV6" is set to "no". ip6 seems not to be in the kernel)    
 https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server
 
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
 sudo ufw allow ssh    
 sudo ufw allow 8073/tcp    
 sudo ufw allow https    
