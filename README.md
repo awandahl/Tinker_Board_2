@@ -6,6 +6,10 @@ sudo su
 apt update    
 apt upgrade    
 
+dpkg-reconfigure keyboard-configuration     
+service keyboard-setup restart    
+reboot now
+
 nano /etc/hostname    
 nano /etc/hosts    
 /etc/init.d/hostname.sh start    
@@ -14,8 +18,7 @@ reboot now
 sudo adduser aw    
 sudo usermod -a -G sudo aw     
 
-$dpkg-reconfigure keyboard-configuration     
-$service keyboard-setup restart 
+
 
 apt install nano    
 
