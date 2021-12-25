@@ -26,6 +26,10 @@ apt install nano
 
 ## firewalld
 
+https://oitibs.com/easy-debian-10-server-firewall/     
+
+
+
 apt install firewalld  
 firewall-cmd --permanent --zone=public --change-interface=eth0     
 firewall-cmd --add-service="ssh" --permanent --zone=public     
