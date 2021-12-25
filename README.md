@@ -15,6 +15,8 @@ nano /etc/hosts
 /etc/init.d/hostname.sh start    
 reboot now    
 
+passwd linaro
+
 sudo adduser aw    
 sudo usermod -a -G sudo aw     
 
