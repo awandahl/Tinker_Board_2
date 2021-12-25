@@ -16,9 +16,10 @@ $service keyboard-setup restart
 
 apt install nano    
 
-apt install nmap
-
 ## ufw firewall
+
+apt install nmap     
+nmap -sTU -O IP-address-Here  
 
 apt install ufw    
 sudo nano /etc/default/ufw   (then make sure "IPV6" is set to "no". ip6 seems not to be in the kernel)    
