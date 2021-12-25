@@ -26,7 +26,11 @@ apt install nano
 
 ## firewalld
 
-apt install firewalld      
+apt install firewalld  
+firewall-cmd --permanent --zone=public --change-interface=eth0     
+firewall-cmd --add-service="ssh" --permanent --zone=public     
+
+
 systemctl list-units --type=service  [firewalld.service  loaded active  running  firewalld - dynamic firewall daemon]
 systemctl status firewalld      
 apt install firewall-config  
