@@ -31,6 +31,8 @@ systemctl list-units --type=service  [firewalld.service  loaded active  running 
 systemctl status firewalld      
 apt install firewall-config  
 apt policy firewalld     see if it's running
+https://computingforgeeks.com/how-to-install-and-configure-firewalld-on-debian/    
+
 
 apt install nmap     
 nmap -sTU -O IP-address-Here  
