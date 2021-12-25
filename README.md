@@ -27,8 +27,10 @@ apt install nano
 ## firewalld
 
 apt install firewalld      
-systemctl list-units --type=service  [firewalld.service  loaded active  running  irewalld - dynamic firewall daemon]
-
+systemctl list-units --type=service  [firewalld.service  loaded active  running  firewalld - dynamic firewall daemon]
+systemctl status firewalld      
+apt install firewall-config  
+apt policy firewalld     see if it's running
 
 apt install nmap     
 nmap -sTU -O IP-address-Here  
