@@ -2,7 +2,10 @@
 
 ## Tinker Board 2  needed initial changes
 
-sudo su
+sudo su    
+apt update    
+apt upgrade    
+
 nano /etc/hostname    
 nano /etc/hosts    
 /etc/init.d/hostname.sh start    
