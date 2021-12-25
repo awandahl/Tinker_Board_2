@@ -24,7 +24,11 @@ sudo usermod -a -G sudo aw
 
 apt install nano    
 
-## ufw firewall
+## firewalld
+
+apt install firewalld      
+systemctl list-units --type=service  [firewalld.service  loaded active  running  irewalld - dynamic firewall daemon]
+
 
 apt install nmap     
 nmap -sTU -O IP-address-Here  
