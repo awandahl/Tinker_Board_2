@@ -44,8 +44,31 @@ sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT    
 
 Default rule = DROP:    
+sudo iptables -P INPUT DROP   
 
-sudo iptables -P INPUT DROP    
+mkdir /etc/iptables    
+sudo iptables-save > /etc/iptables/rules.v4
+
+# Overwrite the current rules    
+sudo iptables-restore < /etc/iptables/rules.v4    
+# Add the new rules keeping the current ones    
+sudo iptables-restore -n < /etc/iptables/rules.v4    
+
+sudo apt install iptables-persistent    
+
+After the installation the initial setup will ask to save the current rules for IPv4 and IPv6, just select Yes and press enter for both.    
+If you make further changes to your iptables rules, remember to save them again using the same command as above. The iptables-persistent looks for the files     rules.v4 and rules.v6 under /etc/iptables.    
+
+Iptables isn’t commonly a service by itself, rather just a command-line tool for controlling the kernel firewall. You can effectively disable it by allowing all traffic and flushing the rules.    
+
+iptables -P INPUT ACCEPT    
+iptables -P OUTPUT ACCEPT    
+iptables -P FORWARD ACCEPT    
+iptables -F    
+
+
+
+
 
 
 
