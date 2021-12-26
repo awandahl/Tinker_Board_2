@@ -29,7 +29,7 @@ apt install nano
 https://oitibs.com/easy-debian-10-server-firewall/     
 
 
-
+apt install --reinstall iptables
 apt install firewalld  
 systemctl start firewalld   
 systemctl enable firewalld     
