@@ -31,9 +31,13 @@ https://oitibs.com/easy-debian-10-server-firewall/
 
 
 apt install firewalld  
-systemctl start firewalld     
+systemctl start firewalld   
+systemctl enable firewalld     
 firewall-cmd --permanent --zone=public --change-interface=eth0     
 firewall-cmd --add-service="ssh" --permanent --zone=public     
+firewall-cmd --add-service="https" --permanent --zone=public   
+....
+firewall-cmd --reload     
 
 
 systemctl list-units --type=service  [firewalld.service  loaded active  running  firewalld - dynamic firewall daemon]
