@@ -24,6 +24,12 @@ sudo usermod -a -G sudo aw
 
 apt install nano    
 
+nano /etc/sysctl.conf      
+net.ipv6.conf.all.disable_ipv6 = 1    
+sysctl -p
+
+
+
 ## firewalld
 
 https://oitibs.com/easy-debian-10-server-firewall/     
