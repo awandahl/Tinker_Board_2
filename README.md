@@ -36,6 +36,18 @@ iptables
 
 https://upcloud.com/community/tutorials/configure-iptables-debian/
 
+Inbound traffic:
+
+sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT     
+sudo iptables -A INPUT -p tcp --dport ssh -j ACCEPT    
+sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT    
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT    
+
+Default rule = DROP:    
+
+sudo iptables -P INPUT DROP    
+
+
 
 
 
