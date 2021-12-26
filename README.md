@@ -32,6 +32,14 @@ sysctl -p
 
 ## firewalld
 
+iptables     
+
+https://upcloud.com/community/tutorials/configure-iptables-debian/
+
+
+
+
+
 https://oitibs.com/easy-debian-10-server-firewall/     
 
 
