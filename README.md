@@ -87,9 +87,51 @@ COMMIT
 COMMIT
 # Completed on Sun Dec 26 21:14:58 2021
 ````
+-----
+
 ## Let's encrypt
 
-apt install libffi-dev
+apt install libffi-dev     
+
+https://certbot.eff.org/instructions?ws=nginx&os=pip     
+
+````
+sudo apt update
+sudo apt install python3 python3-venv libaugeas0
+    
+sudo python3 -m venv /opt/certbot/
+sudo /opt/certbot/bin/pip install --upgrade pip
+sudo /opt/certbot/bin/pip install certbot certbot-nginx
+sudo ln -s /opt/certbot/bin/certbot /usr/bin/certbot
+sudo certbot --nginx
+    
+echo "0 0,12 * * * root /opt/certbot/bin/python -c 'import random; import time; time.sleep(random.random() * 3600)' && sudo renew -q" | sudo tee -a /etc/crontab > /dev/null
+
+````
+#### TIMESHIFT
+
+sudo timeshift --create --comments "Third backup" --tags D   
+
+Saving to device: /dev/sdb1, mounted at path: /run/timeshift/backup    
+Path to daily backups:  /run/timeshift/backup/timeshift/snapshots-daily
+
+sudo timeshift --restore --snapshot '2019-01-12_16-29-08'
+
+Backup till USB:
+
+sudo timeshift --create --comments "Backup to USB" --snapshot-device /dev/sdc1 --tags D
+
+scp -r -q /disk2/timeshift/snapshots/xxxx analyze@analyze.alvar.ug:/disk2/combine &
+
+-----
+
+#### NGINX
+
+sudo systemctl restart nginx   
+sudo nginx -t    
+systemctl status nginx
+
+-----
 
 https://oitibs.com/easy-debian-10-server-firewall/     
 
