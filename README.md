@@ -110,18 +110,14 @@ echo "0 0,12 * * * root /opt/certbot/bin/python -c 'import random; import time; 
 ````
 #### TIMESHIFT
 
-sudo timeshift --create --comments "Third backup" --tags D   
+sudo timeshift --create --comments "new backup" --tags D --snapshot-device /dev/sda1    
 
-Saving to device: /dev/sdb1, mounted at path: /run/timeshift/backup    
-Path to daily backups:  /run/timeshift/backup/timeshift/snapshots-daily
+Saving to device: /dev/sda1, mounted at path: /run/timeshift/backup     
+Path to daily backups: /run/timeshift/backup/timeshift/snapshots-daily    
 
 sudo timeshift --restore --snapshot '2019-01-12_16-29-08'
 
-Backup till USB:
-
-sudo timeshift --create --comments "Backup to USB" --snapshot-device /dev/sdc1 --tags D
-
-scp -r -q /disk2/timeshift/snapshots/xxxx analyze@analyze.alvar.ug:/disk2/combine &
+udisksctl unmount -b /dev/sda1
 
 -----
 
