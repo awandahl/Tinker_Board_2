@@ -30,7 +30,7 @@ sysctl -p
 
 
 
-## iptables
+## iptables Debian 9 Stretch
 
 https://upcloud.com/community/tutorials/configure-iptables-debian/
 
@@ -152,6 +152,8 @@ https://computingforgeeks.com/how-to-install-and-configure-firewalld-on-debian/
 
 apt install nmap     
 nmap -sTU -O IP-address-Here  
+
+## ufw Debian 10 Buster
 
 apt install ufw    
 sudo nano /etc/default/ufw   (then make sure "IPV6" is set to "no". ip6 seems not to be in the kernel)    
