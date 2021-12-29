@@ -29,6 +29,8 @@ net.ipv6.conf.all.disable_ipv6 = 1
 sysctl -p
 
 
+systemctl -l status openwebrx         
+
 
 ## iptables Debian 9 Stretch
 
