@@ -268,6 +268,38 @@ docker stop 56be44f89d15
 
 docker run -it jketterl/openwebrx-full admin adduser sm0hpl
 
+## HackRF
+
+SoapySDR:   
+
+sudo apt-get install cmake g++ libpython-dev python-numpy swig
+
+git clone https://github.com/pothosware/SoapySDR.git
+cd SoapySDR
+
+mkdir build
+cd build
+cmake ..
+make -j4
+sudo make install
+sudo ldconfig #needed on debian systems
+SoapySDRUtil --info
+
+SoapyHackRF
+
+apt install hackrf    
+apt install libhackrf-dev
+
+git clone https://github.com/pothosware/SoapyHackRF.git
+cd SoapyHackRF
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+
+SoapySDRUtil --probe="driver=hackrf"
+
 ## SoapyRemote
 
 
