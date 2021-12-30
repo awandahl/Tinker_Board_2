@@ -53,6 +53,8 @@ sudo apt-get install direwolf
 dpkg -i wsjtx_2.5.2_arm64.deb     
 apt --fix-broken install     
 
+sudo apt-get install sox    
+
 ## iptables Debian 9 Stretch
 
 https://upcloud.com/community/tutorials/configure-iptables-debian/
