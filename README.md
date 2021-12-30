@@ -50,6 +50,8 @@ sudo apt-get install soapysdr-module-all
 
 sudo apt-get install direwolf    
 
+dpkg -i wsjtx_2.5.2_arm64.deb     
+apt --fix-broken install     
 
 ## iptables Debian 9 Stretch
 
