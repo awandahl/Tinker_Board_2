@@ -31,6 +31,15 @@ sysctl -p
 
 systemctl -l status openwebrx         
 
+apt upgrade libsndfile1   
+sudo apt-get install git build-essential cmake libfftw3-dev python3 python3-setuptools rtl-sdr netcat libsndfile-dev librtlsdr-dev automake autoconf libtool pkg-config     
+
+sudo apt-get install libsoapysdr0.6 libsoapysdr-dev soapysdr-tools
+...also install sdr-specific modules:
+sudo apt-get install soapysdr-module-all    
+
+sudo apt-get install direwolf    
+
 
 ## iptables Debian 9 Stretch
 
