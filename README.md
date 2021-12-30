@@ -29,7 +29,15 @@ net.ipv6.conf.all.disable_ipv6 = 1
 sysctl -p
 
 
-systemctl -l status openwebrx         
+systemctl -l status openwebrx   
+
+The following commands are available:     
+
+sudo systemctl enable openwebrx enables automatic startup of the receiver at boot     
+sudo systemctl disable openwebrx disables it again    
+sudo systemctl start openwebrx starts the service manually    
+sudo systemctl stop openwebrx stops the service manually    
+sudo systemctl restart openwebrx restarts the service. This is very useful after changing configuration.    
 
 apt --fix-broken install      
 
