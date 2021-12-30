@@ -31,6 +31,8 @@ sysctl -p
 
 systemctl -l status openwebrx         
 
+apt --fix-broken install      
+
 apt upgrade libsndfile1   
 sudo apt-get install git build-essential cmake libfftw3-dev python3 python3-setuptools rtl-sdr netcat libsndfile-dev librtlsdr-dev automake autoconf libtool pkg-config     
 
