@@ -55,6 +55,31 @@ apt --fix-broken install
 
 sudo apt-get install sox    
 
+## Logs and stuff
+
+journalctl -f -n 0    
+
+
+https://unix.stackexchange.com/questions/464979/restarting-service-based-on-log-output-keywords    
+
+````
+#!/bin/bash
+regex="WARNING: SoapySDR::Device::readStream timeout!"
+ 
+journalctl -f -n 0 |
+while read line
+do
+    if [[ "$line" =~ $regexp ]]; then
+        systemctl restart openwebrx
+        echo I restarted the service at $(date) >> /home/aw/restart_log.txt
+        /bin/sleep 30
+    fi
+done
+````
+## Resizing card
+
+https://sourceforge.net/p/galileodebian/wiki/How%20to%20expand%20the%20root%20filesystem%20to%20use%20the%20entire%20SD%20card/
+
 ## iptables Debian 9 Stretch
 
 https://upcloud.com/community/tutorials/configure-iptables-debian/
