@@ -80,6 +80,11 @@ done
 
 https://sourceforge.net/p/galileodebian/wiki/How%20to%20expand%20the%20root%20filesystem%20to%20use%20the%20entire%20SD%20card/
 
+## GPIO
+
+![image](https://user-images.githubusercontent.com/62021989/148692445-b2ee1f15-ae22-45d3-9554-8151b05318fb.png)
+
+
 ## iptables Debian 9 Stretch
 
 https://upcloud.com/community/tutorials/configure-iptables-debian/
