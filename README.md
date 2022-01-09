@@ -82,6 +82,8 @@ https://sourceforge.net/p/galileodebian/wiki/How%20to%20expand%20the%20root%20fi
 
 ## GPIO
 
+https://tinker-board.asus.com/forum/index.php?/topic/14984-gpio/&tab=comments#comment-15331     
+
 ![image](https://user-images.githubusercontent.com/62021989/148692445-b2ee1f15-ae22-45d3-9554-8151b05318fb.png)
 
 ````
