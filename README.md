@@ -85,7 +85,8 @@ https://sourceforge.net/p/galileodebian/wiki/How%20to%20expand%20the%20root%20fi
 ![image](https://user-images.githubusercontent.com/62021989/148692445-b2ee1f15-ae22-45d3-9554-8151b05318fb.png)
 
 ````
-gpio readall
+output from 'gpio readall'
+ 
  +-----+-----+---------+------+---+--Tinker--+---+------+---------+-----+-----+
  | CPU | wPi |   Name  | Mode | V | Physical | V | Mode | Name    | wPi | CPU |
  +-----+-----+---------+------+---+----++----+---+------+---------+-----+-----+
@@ -98,8 +99,8 @@ gpio readall
  |  85 |   2 |  MOSI.5 |  SPI | 0 | 13 || 14 |   |      | 0v      |     |     |
  |  84 |   3 |  MISO.5 |  SPI | 0 | 15 || 16 | 0 | SPI  | SCLK.5  | 4   | 86  |
  |     |     |    3.3v |      |   | 17 || 18 | 1 | SPI  | CE5.0   | 5   | 87  |
- |  40 |  12 |  TxD.4 | SERL  | 1 | 19 || 20 |   |      | 0v      |     |     |
- |  39 |  13 |  RxD.4 | SERL | 1  | 21 || 22 | 0 | IN   | GPIO3D4 | 6   | 124 |
+ |  40 |  12 |  TxD.4  | SERL | 1 | 19 || 20 |   |      | 0v      |     |     |
+ |  39 |  13 |  RxD.4  | SERL | 1 | 21 || 22 | 0 | IN   | GPIO3D4 | 6   | 124 |
  |  41 |  14 | GPIO1B1 |   IN | 1 | 23 || 24 | 1 | IN   | GPIO1B2 | 10  | 42  |
  |     |     |      0v |      |   | 25 || 26 | 0 | IN   | GPIO0A6 | 11  | 6   |
  |  71 |  30 |   SDA.7 |  I2C | 1 | 27 || 28 | 1 | I2C  | SCL.7   | 31  | 72  |
@@ -112,6 +113,7 @@ gpio readall
  +-----+-----+---------+------+---+----++----+---+------+---------+-----+-----+
  | CPU | wPi |   Name  | Mode | V | Physical | V | Mode | Name    | wPi | CPU |
  +-----+-----+---------+------+---+--Tinker--+---+------+---------+-----+-----+
+
 ````
 
 ## iptables Debian 9 Stretch
