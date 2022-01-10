@@ -1,5 +1,8 @@
 # Tinker_Board_2
 
+Schematics:   https://tinker-board.asus.com/images/doc/download/Tinker_Board_2_Schematics_20201214.pdf     
+
+
 ## Tinker Board 2  needed initial changes
 
 sudo su    
