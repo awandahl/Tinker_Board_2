@@ -85,6 +85,11 @@ https://sourceforge.net/p/galileodebian/wiki/How%20to%20expand%20the%20root%20fi
 
 ## GPIO
 
+Antenna switch:    
+
+root@hf:/var/www/html# python ant.py &    
+192.168.1.15:5000    
+
 Examples:     
 
 https://randomnerdtutorials.com/raspberry-pi-web-server-using-flask-to-control-gpios/     
