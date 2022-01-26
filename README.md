@@ -105,7 +105,6 @@ https://tinker-board.asus.com/forum/index.php?/topic/14984-gpio/&tab=comments#co
 
 ![image](https://user-images.githubusercontent.com/62021989/148692445-b2ee1f15-ae22-45d3-9554-8151b05318fb.png)
 
-````
 ![image](https://user-images.githubusercontent.com/62021989/151205304-a6b69548-1971-4a64-80e4-b733f0486dae.png)
 
 
