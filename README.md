@@ -93,7 +93,7 @@ root@hf:/var/www/html# python ant.py &
 Examples:     
 
 https://randomnerdtutorials.com/raspberry-pi-web-server-using-flask-to-control-gpios/     
-https://www.hackster.io/adhyoksh/controlling-gpio-pins-of-raspberry-pi-with-web-page-2d5bdc     
+*** https://www.hackster.io/adhyoksh/controlling-gpio-pins-of-raspberry-pi-with-web-page-2d5bdc     
 https://www.foobarflies.io/python-on-the-pi-how-to-run-a-flask-gpio-web-service/     
 https://tinkerboarding.co.uk/forum/archive/index.php/thread-306.html    
 https://www.hackster.io/maciek85/control-raspberry-pi-pins-over-the-internet-206e83     
