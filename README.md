@@ -106,36 +106,9 @@ https://tinker-board.asus.com/forum/index.php?/topic/14984-gpio/&tab=comments#co
 ![image](https://user-images.githubusercontent.com/62021989/148692445-b2ee1f15-ae22-45d3-9554-8151b05318fb.png)
 
 ````
-output from 'gpio readall'
- gpio readall
- +-----+-----+---------+------+---+--Tinker--+---+------+---------+-----+-----+
- | CPU | wPi |   Name  | Mode | V | Physical | V | Mode | Name    | wPi | CPU |
- +-----+-----+---------+------+---+----++----+---+------+---------+-----+-----+
- |     |     |    3.3v |      |   |  1 || 2  |   |      | 5v      |     |     |
- |  73 |   8 | GPIO2B1 |   IN | 1 |  3 || 4  |   |      | 5v      |     |     |
- |  74 |   9 | GPIO2B2 |   IN | 1 |  5 || 6  |   |      | 0v      |     |     |
- |   8 |   7 | CLKOUT2 |  CLK | 1 |  7 || 8  | 1 | IN   | GPIO2C1 | 15  | 81  |
- |     |     |      0v |      |   |  9 || 10 | 1 | IN   | GPIO2C0 | 16  | 80  |
- |  83 |   0 | GPIO2C3 |   IN | 1 | 11 || 12 | 0 | IN   | GPIO3D0 | 1   | 120 |
- |  85 |   2 | GPIO2C5 |   IN | 0 | 13 || 14 |   |      | 0v      |     |     |
- |  84 |   3 | GPIO2C4 |   IN | 0 | 15 || 16 | 0 | IN   | GPIO2C6 | 4   | 86  |
- |     |     |    3.3v |      |   | 17 || 18 | 1 | IN   | GPIO2C7 | 5   | 87  |
- |  40 |  12 | GPIO1B0 |   IN | 1 | 19 || 20 |   |      | 0v      |     |     |
- |  39 |  13 | GPIO1A7 |   IN | 1 | 21 || 22 | 0 | IN   | GPIO3D4 | 6   | 124 |
- |  41 |  14 | GPIO1B1 |   IN | 1 | 23 || 24 | 1 | IN   | GPIO1B2 | 10  | 42  |
- |     |     |      0v |      |   | 25 || 26 | 0 | IN   | GPIO0A6 | 11  | 6   |
- |  71 |  30 | GPIO2A7 |   IN | 1 | 27 || 28 | 1 | IN   | GPIO2B0 | 31  | 72  |
- | 126 |  21 | GPIO3D6 |   IN | 0 | 29 || 30 |   |      | 0v      |     |     |
- | 125 |  22 | GPIO3D5 |   IN | 0 | 31 || 32 | 0 | IN   | GPIO4C2 | 26  | 146 |
- | 150 |  23 | GPIO4C6 |  OUT | 1 | 33 || 34 |   |      | 0v      |     |     |
- | 121 |  24 | GPIO3D1 |   IN | 0 | 35 || 36 | 1 | IN   | GPIO2C2 | 27  | 82  |
- | 149 |  25 | GPIO4C5 |   IN | 0 | 37 || 38 | 0 | IN   | GPIO3D3 | 28  | 123 |
- |     |     |      0v |      |   | 39 || 40 | 0 | IN   | GPIO3D7 | 29  | 127 |
- +-----+-----+---------+------+---+----++----+---+------+---------+-----+-----+
- | CPU | wPi |   Name  | Mode | V | Physical | V | Mode | Name    | wPi | CPU |
- +-----+-----+---------+------+---+--Tinker--+---+------+---------+-----+-----+
 
-````
+![image](https://user-images.githubusercontent.com/62021989/151205100-fadbe30a-166c-4435-b532-0ff8b37bd393.png)
+
 
 ## iptables Debian 9 Stretch
 
