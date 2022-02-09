@@ -189,6 +189,8 @@ echo "0 0,12 * * * root /opt/certbot/bin/python -c 'import random; import time; 
 ````
 #### TIMESHIFT
 
+https://dev.to/rahedmir/how-to-use-timeshift-from-command-line-in-linux-1l9b    
+
 sudo timeshift --create --comments "new backup" --tags D --snapshot-device /dev/sda1    
 
 Saving to device: /dev/sda1, mounted at path: /run/timeshift/backup     
