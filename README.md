@@ -189,7 +189,12 @@ echo "0 0,12 * * * root /opt/certbot/bin/python -c 'import random; import time; 
 ````
 #### TIMESHIFT
 
-https://dev.to/rahedmir/how-to-use-timeshift-from-command-line-in-linux-1l9b    
+https://dev.to/rahedmir/how-to-use-timeshift-from-command-line-in-linux-1l9b   
+
+apt-get install udisks2    
+lsblk -f    (check uid for /dev/sda1)    
+nano /etc/timeshift/timeshift.json    
+edit target disk uid    
 
 sudo timeshift --create --comments "new backup" --tags D --snapshot-device /dev/sda1    
 
