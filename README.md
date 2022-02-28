@@ -345,6 +345,33 @@ SoapySDRUtil --probe="driver=hackrf"
 
 
 
+## SDRplay    
+
+
+https://github.com/jketterl/openwebrx/wiki/SDRPlay-device-notes
+
+Get API from https://www.sdrplay.com/dlfinishs/  API 3.07 	RSP Control Library + Driver    
+
+E.g. SDRplay_RSP_API-Linux-3.07.1.run    
+chmod 755 SDRplay_RSP_API-Linux-3.07.1.run    
+./SDRplay_RSP_API-Linux-3.07.1.run    
+Say yes to licence    
+....    
+
+````
+Done    
+
+Service has been installed and started. This device should be rebooted    
+before the service is used. After the installation script finishes,    
+reboot this device.    
+ 
+To start and stop the API service, use the following commands...    
+    
+sudo systemctl start sdrplay    
+sudo systemctl stop sdrplay    
+
+SDRplay API 3.07 Installation Finished    
+
 ## VNC and other OrangePi stuff...
 
 In the ‘Terminal’ window make the updates:    
