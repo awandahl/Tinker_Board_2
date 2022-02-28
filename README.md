@@ -192,8 +192,8 @@ sudo ufw default allow outgoing
 #sudo ufw allow ssh      
 sudo ufw allow 8073/tcp       
 sudo ufw allow https       
-sudo ufw allow from 15.15.15.15 to any port 22 proto tcp    
-sudo ufw allow from 15.15.15.15 to any port 22 proto tcp    
+sudo ufw allow from 192.168.1.0/24 to any port 22 proto tcp    
+
 ...
 ````
 
