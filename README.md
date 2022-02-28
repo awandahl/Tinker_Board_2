@@ -350,7 +350,9 @@ SoapySDRUtil --probe="driver=hackrf"
 
 https://github.com/jketterl/openwebrx/wiki/SDRPlay-device-notes
 
-Get API from https://www.sdrplay.com/dlfinishs/  API 3.07 	RSP Control Library + Driver  
+Get API from https://www.sdrplay.com/dlfinishs/  API 3.07 	RSP Control Library + Driver   
+
+or    
 
 https://github.com/awandahl/Tinker_Board_2/blob/main/SDRplay_RSP_API-ARM64-3.07.1.run
 
@@ -372,7 +374,21 @@ To start and stop the API service, use the following commands...
 sudo systemctl start sdrplay    
 sudo systemctl stop sdrplay    
 
-SDRplay API 3.07 Installation Finished    
+SDRplay API 3.07 Installation Finished   
+
+````
+
+SoapySDRPlay
+
+git clone https://github.com/pothosware/SoapySDRPlay.git    
+cd SoapySDRPlay    
+mkdir build    
+cd build    
+cmake ..    
+make    
+sudo make install    
+
+ldconfig    
 
 ## VNC and other OrangePi stuff...
 
