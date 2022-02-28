@@ -378,7 +378,9 @@ SDRplay API 3.07 Installation Finished
 
 ````
 
-SoapySDRPlay
+####SoapySDRPlay    
+
+https://github.com/pothosware/SoapySDRPlay3/wiki    
 
 git clone https://github.com/pothosware/SoapySDRPlay.git    
 cd SoapySDRPlay    
