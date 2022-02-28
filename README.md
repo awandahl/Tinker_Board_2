@@ -350,11 +350,13 @@ SoapySDRUtil --probe="driver=hackrf"
 
 https://github.com/jketterl/openwebrx/wiki/SDRPlay-device-notes
 
-Get API from https://www.sdrplay.com/dlfinishs/  API 3.07 	RSP Control Library + Driver    
+Get API from https://www.sdrplay.com/dlfinishs/  API 3.07 	RSP Control Library + Driver  
 
-E.g. SDRplay_RSP_API-Linux-3.07.1.run    
-chmod 755 SDRplay_RSP_API-Linux-3.07.1.run    
-./SDRplay_RSP_API-Linux-3.07.1.run    
+https://github.com/awandahl/Tinker_Board_2/blob/main/SDRplay_RSP_API-ARM64-3.07.1.run
+
+   
+chmod 755 SDRplay_RSP_API-ARM64-3.07.1.run    
+./SDRplay_RSP_API-ARM64-3.07.1.run    
 Say yes to licence    
 ....    
 
