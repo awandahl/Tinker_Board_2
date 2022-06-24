@@ -356,6 +356,9 @@ SoapySDRUtil --probe="driver=hackrf"
 
 https://github.com/jketterl/openwebrx/wiki/SDRPlay-device-notes
 
+
+#### API
+
 Get API from https://www.sdrplay.com/dlfinishs/  API 3.07 	RSP Control Library + Driver   
 
 chmod 755 SDRplay_RSP_API-ARM64-3.07.1.run    
@@ -379,7 +382,19 @@ SDRplay API 3.07 Installation Finished
 
 ````
 
-####SoapySDRPlay    
+#### SoapySDR    
+
+git clone https://github.com/pothosware/SoapySDR.git    
+cd SoapySDR    
+mkdir build    
+cd build    
+cmake ..    
+make -j4    
+sudo make install    
+sudo ldconfig #needed on debian systems    
+SoapySDRUtil --info    
+
+#### SoapySDRPlay    
 
 https://github.com/pothosware/SoapySDRPlay3/wiki    
 
